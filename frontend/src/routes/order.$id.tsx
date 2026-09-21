@@ -32,7 +32,7 @@ export const Route = createFileRoute("/order/$id")({
   component: OrderPage,
 });
 
-export function OrderPage() {
+function OrderPage() {
   const { id } = Route.useParams();
   const queryClient = useQueryClient();
   const { data: order, isLoading } = useQuery(orderQuery(id));

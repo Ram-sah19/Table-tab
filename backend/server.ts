@@ -7,6 +7,7 @@ import { connectDB } from "./config/db.js";
 import apiRoutes from "./routes/index.js";
 import { errorHandler } from "./middlewares/error.js";
 import { setSocketServer } from "./realtime/realtime.js";
+import { startScheduler } from "./utils/scheduler.js";
 
 const app = express();
 const server = http.createServer(app);
@@ -92,6 +93,7 @@ async function start() {
       console.log(` Health:  http://127.0.0.1:${ENV.PORT}/api/health`);
       console.log(` SSE:     http://127.0.0.1:${ENV.PORT}/api/realtime`);
       console.log(`=========================================`);
+      startScheduler();
     });
   } catch (error) {
     console.error("[Server Startup Error]:", error);
