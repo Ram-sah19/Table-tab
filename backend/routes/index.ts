@@ -5,6 +5,7 @@ import foodRoutes from "./foodRoutes.js";
 import orderRoutes from "./orderRoutes.js";
 import serviceRequestRoutes from "./serviceRequestRoutes.js";
 import realtimeRoutes from "./realtimeRoutes.js";
+import cronRoutes from "./cronRoutes.js";
 
 const router = Router();
 
@@ -24,5 +25,6 @@ router.use("/foods", foodRoutes);
 router.use("/orders", orderRoutes);
 router.use("/service-requests", serviceRequestRoutes);
 router.use("/realtime", realtimeRoutes);
+router.use("/cron", cronRoutes);
 
 export default router;

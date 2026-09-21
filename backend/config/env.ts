@@ -11,4 +11,5 @@ export const ENV = {
   DATABASE_URL: process.env.DATABASE_URL || process.env.MONGODB_URI || DEFAULT_DB_URI,
   MONGODB_URI: process.env.MONGODB_URI || process.env.DATABASE_URL || DEFAULT_DB_URI,
   JWT_SECRET: process.env.JWT_SECRET || "seamless-serve-secure-jwt-secret-key-2026",
+  CRON_SECRET: process.env.CRON_SECRET || "",
 };
