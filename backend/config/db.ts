@@ -3,8 +3,8 @@ import dns from "node:dns";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { ENV } from "./env";
-import { Category, Food, User } from "../models";
+import { ENV } from "./env.js";
+import { Category, Food, User } from "../models/index.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

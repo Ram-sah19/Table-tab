@@ -15,7 +15,7 @@ export async function getOrders(_req: Request, res: Response) {
 
 export async function getOrderById(req: Request, res: Response) {
   try {
-    const { id } = req.params;
+    const id = String(req.params.id);
     let order = null;
 
     if (id.match(/^[0-9a-fA-F]{24}$/)) {
