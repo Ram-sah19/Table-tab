@@ -41,14 +41,15 @@ A modern, mobile-first Restaurant QR Ordering System built with React, Tailwind 
 ### 1. Install Dependencies
 
 ```bash
-# Backend dependencies
-cd backend
+# Install root and frontend dependencies
 npm install
 
-# Frontend dependencies
-cd ../frontend
-npm install
+# If your package manager does not install workspaces automatically:
+npm run install:all
 ```
+
+The backend is deployed separately on Render, so the Cloudflare frontend build
+does not compile or deploy the backend.
 
 ### 2. Start Backend Server
 
